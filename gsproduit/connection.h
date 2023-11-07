@@ -1,6 +1,5 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
-#include<QDebug>
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -8,7 +7,7 @@
 class Connection
 {
 public:
-    Connection();
+    Connection();//Constructeur par defaut
     bool createconnect();
 };
 
