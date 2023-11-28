@@ -13,8 +13,7 @@ public:
     produit();
           //Getters
          produit (int,QString,QString,QString);
-         int getqrcode();
-
+            int getqrcode();
             QString getnom();
             QString getcategorie();
             QString getquantite();
@@ -30,9 +29,12 @@ public:
             bool ajouter();
                    QSqlQueryModel* afficher();
                    bool supprimer(int);
-
                    bool modifier(int,QString,QString,QString);
-
+                   void recherche(QTableView * affiche_tab, int);
+                   QSqlQueryModel * trierqr();
+                   void telechargerPDF();
+ QSqlQueryModel * afficher_his();
+void saveSqlQueryModelToPdf();
 private:
             int qrcode;
            QString  quantite,categorie,nom;

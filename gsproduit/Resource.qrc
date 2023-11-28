@@ -1,0 +1,4 @@
+<RCC>
+    <qresource prefix="/logo"/>
+    <qresource prefix="/logo" lang="francais"/>
+</RCC>

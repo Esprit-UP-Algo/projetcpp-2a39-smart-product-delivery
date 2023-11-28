@@ -1,6 +1,7 @@
-QT       += core gui sql multimedia multimediawidgets
-QT       += core gui
-QT       += sql
+QT       +=  core gui sql serialport network multimedia multimediawidgets charts printsupport widgets axcontainer
+
+QT       += core gui multimedia multimediawidgets printsupport
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -20,12 +21,16 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
-    produit.cpp
+    notifications.cpp \
+    produit.cpp \
+    qrcode.cpp
 
 HEADERS += \
     connection.h \
     mainwindow.h \
-    produit.h
+    notifications.h \
+    produit.h \
+    qrcode.h
 
 FORMS += \
     mainwindow.ui
@@ -34,3 +39,7 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Resource.qrc \
+    image.qrc
